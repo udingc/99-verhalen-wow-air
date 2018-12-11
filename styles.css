@@ -1,0 +1,121 @@
+body {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #2b4040;
+    font-family: museo-sans, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1em;
+    line-height: 1.42857143;
+    padding: 15px 15px 15px 15px;
+}
+
+
+header img:nth-of-type(1) {
+    max-width: 66px;
+}
+
+header nav {
+    border-bottom: solid 1px;
+    border-color: #A6C4C4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+header nav ul {
+    align-content: space-between;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    padding: inherit;
+}
+
+header nav ul li {
+    color: #2b4040;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 0.7em;
+}
+
+header nav ul li a {
+    color: #99258D;
+    text-decoration: none;
+}
+
+section article button {
+    text-transform: uppercase;
+}
+
+section article button i {
+    color: #99258D;
+}
+
+article {
+    background-color: white;
+    border: solid 0.0625em;
+    border-color: #A6C4C4;
+}
+
+article a img {
+    width: 100%;
+    height: auto;
+}
+
+.lees_meer_button {
+    border: none;
+    background-color: #99258D;
+    color: white;
+    text-transform: uppercase;
+    line-height: 2.5em;
+    border-radius: 3px;
+    padding: 0 1em;
+}
+
+.mijn_lijst_download_button {
+    border: none;
+    color: #2b4040;
+    text-transform: uppercase;
+}
+
+.mijn_lijst_download_button {
+    border: none;
+    color: #2b4040;
+    text-transform: uppercase;
+}
+
+article button i {
+    color: #99258D;
+    text-transform: uppercase;
+}
+
+article div h3 {
+    padding-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 0em;
+}
+
+article div p {
+    padding-left: 15px;
+    margin-top: 0em;
+    margin-bottom: 5px;
+}
+
+article footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.contact_opnemen {
+    background-color: antiquewhite;
+}
+
+.contact {
+    color: #99258D;
+}
+
+h3 {
+    font-weight: 900;
+    padding-left: 1em;
+}
