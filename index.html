@@ -27,24 +27,22 @@
 
     <section>
         <h2>Lees verder</h2>
-        <article>
+        <article class="media">
             <a href=""><img src="pictures/paranoia.png" alt=""></a>
-            <!--<a href="">lees verder</a>-->
-            <button class="lees_meer_button">Lees verder</button>
-            <div>
-                <h3>Paranoia</h3>
+            <button class="lees_verder_button">Lees verder</button>
+            <h3>Paranoia</h3>
+            <footer>
                 <p>Resterende leesduur: +-5 min</p>
-                <footer>
-                    <button class="mijn_lijst_download_button"><i class="fas fa-plus"></i> mijn lijst</button>
-                    <button class="mijn_lijst_download_button"><i class="fas fa-download"></i> download</button>
-                </footer>
-            </div>
+                <button><i class="fas fa-plus"></i> mijn lijst</button>
+                <button><i class="fas fa-download"></i> download</button>
+            </footer>
         </article>
     </section>
 
     <!-- filter functie -->
-    <form action="">
+    <form>
         <h3>Zoek een verhaal</h3>
+        <legend class="filteren"><i class="fas fa-filter"></i>Filteren<i class="fas fa-angle-down"></i></legend>
         <fieldset>
             <legend>Sorteer op</legend>
             <label for="aanbevolen">aanbevolen</label><input type="radio" id="aanbevolen">
@@ -63,70 +61,42 @@
             </fieldset>
             <fieldset>
                 <legend>Leesduur</legend>
-                <input type="range" min="0" max="20" value="50" class="slider" id="myRange">
+                <label for="0_5min">0-5 min</label><input type="radio" id="0_5min">
+                <label for="5_10min">5-10 min</label><input type="radio" id="5_10min">
+                <label for="10_15min">10-15 min</label><input type="radio" id="10_15min">
             </fieldset>
         </fieldset>
     </form>
 
     <main>
         <article>
-            <a href=""><img src="" alt=""></a>
-            <a href="">lees meer</a>
-            <div>
-                <h3>Droom</h3>
-                <p>leesduur: 0-5 min | Genre: Humor</p>
-                <footer>
-                    <button>
-                    </button>
-                    <button>
-                    </button>
-                </footer>
-            </div>
+            <a href=""><img src="pictures/gefrustreerd.JPG" alt=""></a>
+            <button class="lees_verder_button">Lees meer</button>
+            <h3>Gefrustreerd</h3>
+            <footer>
+                <p>Leesduur: 5-10 min | Genre: Spanning</p>
+                <button><i class="fas fa-plus"></i> mijn lijst</button>
+                <button><i class="fas fa-download"></i> download</button>
+            </footer>
         </article>
 
         <article>
-            <a href=""><img src="" alt=""></a>
-            <a href="">lees meer</a>
-            <div>
-                <h3>Poepen</h3>
-                <p>leesduur: 0-5 min | Genre: Humor</p>
-                <footer>
-                    <button></button>
-                    <button></button>
-                </footer>
-            </div>
+            <a href=""><img src="pictures/droom.JPG" alt=""></a>
+            <button class="lees_verder_button">Lees meer</button>
+            <h3>Droom</h3>
+            <footer>
+                <p>Leesduur: 0-5 min | Genre: Humor</p>
+                <button><i class="fas fa-plus"></i> mijn lijst</button>
+                <button><i class="fas fa-download"></i> download</button>
+            </footer>
         </article>
 
-        <article>
-            <a href=""><img src="" alt=""></a>
-            <a href="">lees meer</a>
-            <div>
-                <h3>Alwetende verteller</h3>
-                <p>leesduur: 5-10 min | Genre: Sensatie </p>
-                <footer>
-                    <button></button>
-                    <button></button>
-                </footer>
-            </div>
-        </article>
 
-        <article>
-            <a href=""><img src="" alt=""></a>
-            <a href="">lees meer</a>
-            <div>
-                <h3>Western</h3>
-                <p>leesduur: 0-5 min | Genre: Spanning</p>
-                <footer>
-                    <button></button>
-                    <button></button>
-                </footer>
-            </div>
-        </article>
     </main>
 
     <footer class="contact_opnemen">
         <p>WOW air - Katrínatún 4 - 105 Reykjavík - Kt. 451011-0220 - Vsknr. 109354</p>
-        <p class="contact">Neem contact met ons op</p>
+        <p>Neem contact met ons op</p>
         <ul>
             <li><a href="https://nl-nl.facebook.com/wowiceland/" class="fab fa-facebook-f"></a></li>
             <li><a href="https://www.twitter.com/wow_air" class="fab fa-twitter"></a></li>
