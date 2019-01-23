@@ -17,84 +17,119 @@
                 <img src="pictures/wow_air_logo.png" alt="">
             </a>
             <ul>
-                <li><a href="" title="Mijn Lijst" class="fas fa-plus"></a> mijn lijst</li>
+                <li><a href="" title="Mijn Lijst" class="fas fa-plus"></a>mijn lijst</li>
                 <li><a href="" title="Mijn Downloads" class="fas fa-download"></a>downloads</li>
                 <li><a href="inloggen.html" title="Inloggen" class="fas fa-sign-in-alt"></a>uitloggen</li>
             </ul>
         </nav>
     </header>
 
-
-    <section>
-        <h2>Lees verder</h2>
-        <article class="media">
-            <a href=""><img src="pictures/paranoia.png" alt=""></a>
-            <button class="lees_verder_button">Lees verder</button>
-            <h3>Paranoia</h3>
-            <footer>
-                <p>Resterende leesduur: +-5 min</p>
-                <button><i class="fas fa-plus"></i> mijn lijst</button>
-                <button><i class="fas fa-download"></i> download</button>
-            </footer>
-        </article>
-    </section>
-
     <!-- filter functie -->
     <form>
         <h3>Zoek een verhaal</h3>
-        <legend class="filteren"><i class="fas fa-filter"></i>Filteren<i class="fas fa-angle-down"></i></legend>
+        <input type="checkbox" id="filteren">
+        <label class="filteren" for="filteren"><i class="fas fa-filter"></i>Filteren<i class="fas fa-angle-down"></i></label>
+
         <fieldset>
             <legend>Sorteer op</legend>
-            <label for="aanbevolen">aanbevolen</label><input type="radio" id="aanbevolen">
-            <label for="populair">populair</label><input type="radio" id="populair">
-            <label for="verhaal_kort-lang">verhaal kort-lang</label><input type="radio" id="verhaal_kort-lang">
-            <label for="verhaal_lang-kort">verhaal lang-kort</label><input type="radio" id="verhaal_lang-kort">
+            <input type="radio" id="aanbevolen" name="groep_1"><label for="aanbevolen">aanbevolen</label>
+            <input type="radio" id="populair" name="groep_1"><label for="populair">populair</label>
+            <input type="radio" id="verhaal_kort-lang" name="groep_1"><label for="verhaal_kort-lang">verhaal kort-lang</label>
+            <input type="radio" id="verhaal_lang-kort" name="groep_1"><label for="verhaal_lang-kort">verhaal lang-kort</label>
         </fieldset>
         <fieldset>
             <legend>Filter op</legend>
             <fieldset>
                 <legend>Genre</legend>
-                <label for="humor">humor</label><input type="radio" id="humor">
-                <label for="spanning">spanning</label><input type="radio" id="spanning">
-                <label for="sensatie">sensatie</label><input type="radio" id="sensatie">
-                <label for="overige">overige</label><input type="radio" id="overige">
+                <input type="radio" id="humor" name="groep_2"><label for="humor">humor</label>
+                <input type="radio" id="spanning" name="groep_2"><label for="spanning">spanning</label>
+                <input type="radio" id="sensatie" name="groep_2"><label for="sensatie">sensatie</label>
+                <input type="radio" id="overige" name="groep_2"><label for="overige">overige</label>
             </fieldset>
             <fieldset>
                 <legend>Leesduur</legend>
-                <label for="0_5min">0-5 min</label><input type="radio" id="0_5min">
-                <label for="5_10min">5-10 min</label><input type="radio" id="5_10min">
-                <label for="10_15min">10-15 min</label><input type="radio" id="10_15min">
+                <input type="radio" id="0_5min" name="groep_3"><label for="0_5min">0-5 min</label>
+                <input type="radio" id="5_10min" name="groep_3"><label for="5_10min">5-10 min</label>
+                <input type="radio" id="10_15min" name="groep_3"><label for="10_15min">10-15 min</label>
             </fieldset>
         </fieldset>
     </form>
 
+    <section>
+        <h5>99 verhalen beschikbaar</h5>
+    </section>
+
     <main>
         <article>
-            <a href=""><img src="pictures/gefrustreerd.JPG" alt=""></a>
-            <button class="lees_verder_button">Lees meer</button>
-            <h3>Gefrustreerd</h3>
+            <a href=""><img src="pictures/paranoia.jpg" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Paranoia</h3>
             <footer>
-                <p>Leesduur: 5-10 min | Genre: Spanning</p>
-                <button><i class="fas fa-plus"></i> mijn lijst</button>
-                <button><i class="fas fa-download"></i> download</button>
+                <p>Leesduur: 10-15 min | Genre: Spanning</p>
+                <button><i class="fas fa-plus"></i>mijn lijst</button>
+                <button><i class="fas fa-download"></i>download</button>
             </footer>
         </article>
 
         <article>
             <a href=""><img src="pictures/droom.JPG" alt=""></a>
-            <button class="lees_verder_button">Lees meer</button>
-            <h3>Droom</h3>
+            <button>Lees meer</button>
+            <h3>Verrast</h3>
             <footer>
                 <p>Leesduur: 0-5 min | Genre: Humor</p>
-                <button><i class="fas fa-plus"></i> mijn lijst</button>
-                <button><i class="fas fa-download"></i> download</button>
+                <button><i class="fas fa-plus"></i>mijn lijst</button>
+                <button><i class="fas fa-download"></i>download</button>
+            </footer>
+        </article>
+
+        <article>
+            <a href=""><img src="pictures/gefrustreerd.JPG" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Gefrustreerd</h3>
+            <footer>
+                <p>Leesduur: 5-10 min | Genre: Spanning</p>
+                <button><i class="fas fa-plus"></i>mijn lijst</button>
+                <button><i class="fas fa-download"></i>download</button>
+            </footer>
+        </article>
+
+        <article>
+            <a href=""><img src="pictures/verliefd.JPG" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Verliefd</h3>
+            <footer>
+                <p>Leesduur: 0-5 min | Genre: Sensatie</p>
+                <button><i class="fas fa-plus"></i>mijn lijst</button>
+                <button><i class="fas fa-download"></i>download</button>
+            </footer>
+        </article>
+
+        <article>
+            <a href=""><img src="pictures/mop.png" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Mop</h3>
+            <footer>
+                <p>Leesduur: 5-10 min | Genre: Humor </p>
+                <button><i class="fas fa-plus"></i>mijn lijst</button>
+                <button><i class="fas fa-download"></i>download</button>
+            </footer>
+        </article>
+
+        <article>
+            <a href=""><img src="pictures/poepen.jpg" alt=""></a>
+            <button>Lees meer</button>
+            <h3>Poepen</h3>
+            <footer>
+                <p>Leesduur: 10-15 min | Genre: Sensatie</p>
+                <button><i class="fas fa-plus"></i>mijn lijst</button>
+                <button><i class="fas fa-download"></i>download</button>
             </footer>
         </article>
 
 
     </main>
 
-    <footer class="contact_opnemen">
+    <footer>
         <p>WOW air - Katrínatún 4 - 105 Reykjavík - Kt. 451011-0220 - Vsknr. 109354</p>
         <p>Neem contact met ons op</p>
         <ul>
@@ -106,6 +141,8 @@
             <li><a href="https://www.tripadvisor.com/Airlines-WW-WOW-air" class="fab fa-tripadvisor"></a></li>
         </ul>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
