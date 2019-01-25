@@ -7,13 +7,14 @@ body {
     line-height: 1.42857143;
     margin: 0em;
     padding: 0.9375em 0.9375em 0.9375em 0.9375em;
+    overflow-x: hidden;
 }
 
+/* navigatie */
+
 header {
-    border-bottom: solid 0.0625em #A6C4C4;
     margin-top: 0em;
-    margin-bottom: 32px;
-    height: 3.1em;
+    margin-bottom: 1em;
 }
 
 header img {
@@ -25,6 +26,17 @@ header nav {
     flex-direction: row;
     justify-content: flex-end;
     justify-content: space-between;
+    position: relative;
+}
+
+header nav:after {
+    border-bottom: solid #A6C4C4 1px;
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    z-index: -1;
 }
 
 header nav ul {
@@ -55,6 +67,151 @@ header nav ul li a {
     padding: 0.25em;
 }
 
+/* zoek een verhaal kolom */
+
+form {
+    background-color: #fafafa;
+    border: solid 1px #A6C4C4;
+    padding: 6.859px;
+    margin-bottom: 40px;
+}
+
+form h3 {
+    padding-top: 0.9375em;
+    text-align: center;
+    color: #99258D;
+}
+
+form fieldset {
+    text-transform: uppercase;
+    border: none;
+}
+
+form > fieldset {
+    opacity: 0;
+    height: 0;
+    transition: all .4s ease-in-out;
+}
+
+form fieldset legend {
+    border-bottom: 1px solid #FFDF5D;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+form a {
+    text-transform: uppercase;
+    background-color: #99258D;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    line-height: 2em;
+    border-radius: 2px;
+    padding: 8px 15px 8px 15px;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 10px 7px 0px 7px;
+    float: right;
+}
+
+form a:hover {
+    background: #6D105C;
+}
+
+form > label {
+    border: solid 0.0625em;
+    background-color: #99258D;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 300;
+    width: 100%;
+    display: flex;
+}
+
+form > label i:first-child {
+    background-color: #99258D;
+    margin-right: 10px;
+    margin-top: 4.5px;
+    margin-left: 10px;
+    font-size: 0.9em;
+
+}
+
+form > label i:last-child {
+    background-color: #99258D;
+    margin-right: 10px;
+    margin-top: 4.5px;
+    font-size: 1em;
+    margin-left: auto;
+}
+
+form fieldset label:nth-child(n+2) {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    color: rgba(153, 37, 141, 1);
+    margin-right: 10px;
+}
+
+form fieldset label:nth-child(n+2):hover {
+    background: rgba(239, 192, 48, 0.4);
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+form fieldset input[type="radio"]:focus + label,
+form fieldset input[type="radio"]:checked + label {
+    background: rgba(239, 192, 48, 1);
+    padding: 6px 10px;
+    border-radius: 10px;
+    color: #2B4040;
+}
+
+form fieldset input {
+    opacity: 0;
+}
+
+
+
+form > input {
+    position: absolute;
+    left: -999px;
+}
+
+.filteren ~ fieldset {
+    transform: translateY(-4rem);
+    pointer-events: none;
+    transition: all 0.7s;
+}
+
+.filteren.active,
+.filteren.active i {
+    background: #6D105C;
+}
+
+
+.filteren.active ~ fieldset {
+    display: block;
+    opacity: 1;
+    height: 100%;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.filteren {
+    overflow: hidden;
+}
+
+.filteren i:nth-of-type(2) {
+    transition: all 1s;
+}
+
+.filteren.active i:nth-of-type(2) {
+    transform: rotate(180deg) translateY(0.3rem);
+}
+
+/* de verhalen */
+
 article {
     max-width: 100%;
     display: grid;
@@ -75,7 +232,6 @@ article a {
 
 article a img {
     max-width: 100%;
-
 }
 
 article h3 {
@@ -138,6 +294,14 @@ article footer button:nth-child(3) {
     background: white;
 }
 
+article footer button:nth-child(2):hover {
+    color: #99258D;
+}
+
+article footer button:nth-child(3):hover {
+    color: #99258D;
+}
+
 article footer button i {
     display: block !important;
     /* important want font-aweseome wil inline blocken*/
@@ -161,106 +325,15 @@ article button i {
     color: #99258D;
 }
 
-/* filteren kolom */
-
-form {
-    background-color: #fafafa;
-    border: solid 1px #A6C4C4;
-    padding: 6.859px;
-    margin-bottom: 40px;
-}
-
-form h3 {
-    padding-top: 0.9375em;
-    text-align: center;
-    color: #99258D;
-}
-
-form fieldset {
-    text-transform: uppercase;
-    border: none;
-}
-
-form > fieldset {
-    opacity: 0;
-    height: 0;
-    transition: all .4s ease-in-out;
-}
-
-form fieldset legend {
-    border-bottom: 1px solid #FFDF5D;
-    font-weight: 700;
-}
-
-form > label {
-    border: solid 0.0625em;
-    background-color: #99258D;
-    color: white;
-    font-size: 1.15em;
-    font-weight: 300;
-    width: 100%;
-}
-
-form fieldset label:nth-child(n+2) {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 10px;
-    color: rgba(153, 37, 141, 1);
-    margin-right: 10px;
-}
-
-form fieldset label:nth-child(n+2):hover {
-    background: rgba(239, 192, 48, 0.4);
-    padding: 6px 10px;
-    border-radius: 10px;
-}
-
-form fieldset input[type="radio"]:checked + label {
-    background: rgba(239, 192, 48, 1);
-    padding: 6px 10px;
-    border-radius: 10px;
-    color: #2B4040;
-}
-
-form fieldset input {
-    display: none;
-}
-
-form > input {
-    position: absolute;
-    left: -999px;
-}
-
-/*
-form fieldset label i:first-child {
-    float: left;
-    background-color: #99258D;
-    margin-right: 10px;
-    margin-top: 4.5px;
-    font-size: 0.9em;
-
-}
-
-form fieldset label i:last-child {
-    float: right;
-    background-color: #99258D;
-    margin-right: 10px;
-    margin-top: 4.5px;
-    font-size: 1em;
-}
-
-*/
-
-#filteren[type=checkbox]:checked ~ fieldset {
-    opacity: 1;
-    height: 100%;
-}
-
 /* 99 verhalen beschikbaar text*/
+
+section {
+    display: flex;
+}
 
 section h5 {
     margin: 0 auto;
-    width: 60%;
+    display: inline-flex;
     text-align: center;
     border-bottom: 2px solid #FFDF5D;
 }
@@ -273,6 +346,8 @@ body > footer {
     padding-bottom: 1em;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 1em;
+    margin-top: 20px;
 }
 
 body > footer p:first-of-type {
@@ -317,12 +392,53 @@ body > footer ul li a {
     header nav ul li {
         font-size: 1em;
     }
+
+    nav ul li:nth-of-type(2) section {
+        left: 1.5rem;
+        height: 10px;
+        width: 10px;
+
+    }
 }
 
 
 /* breakpoint naar desktop */
 
+#heroBanner div {
+    display: none;
+}
+
 @media (min-width: 61em) {
+    #heroBanner {
+        background-image: url('/pictures/banner.jpeg');
+        background-size: cover;
+        height: 24rem;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.75rem;
+        padding-bottom: 0;
+    }
+
+    .filteren.active i:nth-of-type(2) {
+        display: none;
+    }
+
+    #heroBanner form {
+        width: 30rem;
+        height: 110%;
+    }
+
+    #heroBanner form fieldset {
+        height: auto;
+    }
+
+    #heroBanner div {
+        color: white;
+        display: block;
+        padding-left: 1.25em;
+    }
+
     main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -340,4 +456,124 @@ body > footer ul li a {
     header nav ul li {
         padding-bottom: 1em;
     }
+
+    section h5 {
+        margin-top: 70px;
+    }
+}
+
+/* paranoia html styles */
+
+#para section {
+    display: block;
+    padding: 1.25em;
+    background-color: #99258D;
+}
+
+#para section h3 {
+    color: white;
+    font-weight: 300;
+    padding-bottom: 0.625em;
+    text-align: center;
+}
+
+#para section footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#para section footer button {
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 100;
+    width: 10em;
+    background: #99258D;
+}
+
+#para section footer button:hover,
+#para section footer button i:hover {
+    color: #A6C4C4;
+}
+
+#para section footer button i {
+    display: block !important;
+    color: white;
+    /* important want font-aweseome wil inline blocken*/
+}
+
+#para {
+    padding-bottom: 12rem;
+    min-height: 100vh;
+    /* hier heb ik bewust voor gekozen omdat anders de footer in het midden van het scherm stond en dat is niet heel mooi*/
+}
+
+#para > footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* javascript download */
+
+nav ul li:nth-of-type(2) {
+    position: relative;
+}
+
+nav ul li:nth-of-type(2) section {
+    position: absolute;
+    left: 5.5rem;
+    top: -6px;
+    display: none;
+    background-color: #A6C4C4;
+    border-radius: 50%;
+    padding-left: 5px;
+    padding-bottom: 4px;
+    height: 12px;
+    width: 12px;
+    font-weight: 500;
+}
+
+nav ul li:nth-of-type(2) section.aan {
+    display: block;
+}
+
+
+/* popup */
+
+#popup {
+    display: block;
+    background: #A6C4C4;
+    color: 2B4040;
+    text-align: center;
+    position: fixed;
+    width: 30rem;
+    height: 6rem;
+    left: calc(50% - 15rem);
+    bottom: 0;
+    transition: .3s ease-out all;
+    opacity: 1;
+
+}
+
+#popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1rem) scale(.95);
+}
+
+#popup button {
+    text-transform: uppercase;
+    background-color: #99258D;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    line-height: 2em;
+    border-radius: 2px;
+    padding: 8px 15px 8px 15px;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 10px 7px 0px 7px;
 }
